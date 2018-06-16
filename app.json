@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "squad",
+    "description": "A very interesting project.",
+    "slug": "squad",
+    "privacy": "public",
+    "sdkVersion": "28.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyDw0SGhye1fL_2egxTl9a7cjcBkQyHxjcE",
+      }
+    }
+  }
+}
