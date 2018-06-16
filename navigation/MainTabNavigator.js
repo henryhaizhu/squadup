@@ -9,18 +9,10 @@ import VolunteerScreen from '../screens/VolunteerScreen';
 import ShopScreen from '../screens/ShopScreen';
 import CreateScreen from '../screens/CreateEventScreen';
 
-const CreateStack = createStackNavigator({
-  Create: {
-    screen: CreateScreen
-  }
-}, {
-  
-  headerMode: 'none'
-})
 
 const RecreationStack = createStackNavigator({
   Recreation: RecreationScreen,
-  Create: CreateStack
+  Create: CreateScreen
 });
 
 RecreationStack.navigationOptions = {
@@ -35,7 +27,7 @@ RecreationStack.navigationOptions = {
 
 const VolunteerStack = createStackNavigator({
   Volunteer: VolunteerScreen,
-  Create: CreateStack
+  Create: CreateScreen
 });
 
 VolunteerStack.navigationOptions = {
@@ -50,16 +42,12 @@ VolunteerStack.navigationOptions = {
 
 const ShopStack = createStackNavigator({
   Shop: ShopScreen,
-  Create: CreateStack
+  Create: CreateScreen
 });
 
 ShopStack.navigationOptions = {
   tabBarLabel: 'Shop',
   tabBarIcon: ({ focused }) => (
-    // <TabBarIcon
-    //   focused={focused}
-    //   name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
-    // />
     <Icon
       name='shopping-basket'
       color={focused ? "#0066cc": "#D3D3D3"}
@@ -72,3 +60,4 @@ export default createBottomTabNavigator({
   VolunteerStack,
   ShopStack,
 });
+
