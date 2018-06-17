@@ -74,19 +74,22 @@ export default class CreateScreen extends React.Component {
                     raised
                     title="Submit"
                     borderRadius={2}
-                    onPress={()=>{navigation.navigate('Recreation', {...this.state})}}
-                    underlayColor='darkgreen'
+                    onPress={()=>{navigation.navigate(eventType, {...this.state})}}
+                    underlayColor='#007849'
                     backgroundColor='white'
-                    color='#007aff'
+                    color='gray'
                     containerViewStyle={{
                         width: "80%",
                         alignSelf: 'center',
                         borderWidth: 1,
                         borderBottomWidth: 3,
-                        borderColor: '#007aff',
+                        borderColor: "#0375b4",
                         marginLeft: 5,
                         marginRight: 5,
-                        marginTop: 10
+                        marginTop: 10,
+                        shadowColor: '#007849',
+                        shadowOffset: { width: 2, height: 2 },
+                        shadowOpacity: 0.8,
                     }}
                 />
             </View>
@@ -98,5 +101,20 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-    }
+    },
+    buttonStyle: {
+        flex: 1,
+        flexDirection: "column",
+        justifyContent: "space-around",
+        alignSelf: "stretch",
+        borderWidth: 1,
+        borderBottomWidth: 3,
+        borderColor: "#0375b4",
+        shadowColor: '#007849',
+        shadowOffset: { width: 2, height: 2 },
+        shadowOpacity: 0.8,
+        marginLeft: 5,
+        marginRight: 5,
+        marginBottom: 0
+      }
 })

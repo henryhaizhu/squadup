@@ -8,6 +8,8 @@ import RecreationScreen from '../screens/RecreationScreen';
 import VolunteerScreen from '../screens/VolunteerScreen';
 import ShopScreen from '../screens/ShopScreen';
 import CreateScreen from '../screens/CreateEventScreen';
+import ProfileScreen from './../screens/ProfileScreen';
+import ChannelScreen from './../screens/ChannelScreen';
 
 
 const RecreationStack = createStackNavigator({
@@ -55,9 +57,25 @@ ShopStack.navigationOptions = {
   ),
 };
 
+const PersonalStack = createStackNavigator({
+  Profile: ProfileScreen,
+  Channel: ChannelScreen
+})
+
+PersonalStack.navigationOptions = {
+  tabBarLabel: 'Personal',
+  tabBarIcon: ({ focused }) => (
+    <Icon
+      name='person'
+      color={focused ? "#0066cc": "#D3D3D3"}
+    />
+  ),
+};
+
 export default createBottomTabNavigator({
   RecreationStack,
   VolunteerStack,
   ShopStack,
+  PersonalStack
 });
 
